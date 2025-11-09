@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.page-container {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-top: 60px;
+  }
+}
+

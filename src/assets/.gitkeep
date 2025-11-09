@@ -1,0 +1,5 @@
+# Place your images here
+# Example: profile-image.jpg, profile-image.png, etc.
+# Then import them in your components like:
+# import profileImage from '../assets/profile-image.jpg'
+
