@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
 import "./Projects.css";
-
+import pot from "../../public/pot.png"
+import blocktopia from "../../public/blocktopia.jfif"
+import blog from "../../public/blog.avif"
+import ecommerce from "../../public/ecommerce.jfif"
+import event from "../../public/event.jfif"
+import weather from "../../public/download.jfif"
 const Projects = () => {
+  let arr = [ecommerce,event,weather,blog,pot,blocktopia];
   const projects = [
     {
       id: 1,
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-      image: "../../public/ecommerce.jfif",
+      image: {ecommerce},
       link: "https://github.com/Zeeshanakbar444/ecommerce-project#:~:text=Public-,Pin,0,-Zeeshanakbar444/ecommerce%2Dproject",
       tags: ["React", "Node.js", "MongoDB", "express.js"],
     },
@@ -107,7 +113,7 @@ const Projects = () => {
         </motion.div>
 
         <div className="projects-grid">
-          {projects.map((project) => (
+          {projects.map(( project,id) => (
             <motion.div
               key={project.id}
               className="project-card"
@@ -117,7 +123,7 @@ const Projects = () => {
             >
               <div className="project-image-container">
                 <img
-                  src={project.image}
+                  src={arr[id]}
                   alt={project.title}
                   className="project-image"
                 />
